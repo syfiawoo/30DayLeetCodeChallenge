@@ -10,7 +10,7 @@ class Solution:
     def middle_node(head: ListNode) -> ListNode:
         """
         :param head:
-        :return:
+        :return: middle node
         """
         curr = head  # start from the first item
         m_list = []  # an empty list to which nodes would be appended
