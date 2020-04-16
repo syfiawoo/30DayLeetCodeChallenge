@@ -6,6 +6,18 @@ class ListNode:
 
 
 class Solution:
+    '''
+
+    '''
+
+    class LinkedList:
+        def __init__(self):
+            self.head = None
+            self.tail = None
+
+        def insert_node(self, item: int):
+            pass
+
     @staticmethod
     def middle_node(head: ListNode) -> ListNode:
         """
