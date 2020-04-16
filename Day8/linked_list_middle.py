@@ -15,8 +15,17 @@ class Solution:
             self.head = None
             self.tail = None
 
-        def insert_node(self, item: int):
-            pass
+        def append_node(self, item: int):
+            # create the new node to be added to end of list
+            new_node = ListNode(item)
+            # check to see if list is empty
+            # head should become the new_node
+            if not self.head:
+                self.head = new_node
+            else:
+                #
+                self.tail.next = new_node
+            self.tail = new_node
 
     @staticmethod
     def middle_node(head: ListNode) -> ListNode:
