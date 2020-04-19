@@ -1,11 +1,11 @@
 from pytest import fixture, mark
 
-from Day8.linked_list_middle import Solution
+from Day8.linked_list_middle import Solution, LinkedList
 
 
 @fixture
 def create_list():
-    test_list = Solution.LinkedList()
+    test_list = LinkedList()
     return test_list
 
 
@@ -18,8 +18,7 @@ def add_to_list(create_list, nums):
 
 @mark.parametrize('nums', [range(1), range(2), range(100), range(105)])
 def test_middle_node(add_to_list, nums):
-    result_list = add_to_list
-    assert Solution.middle_node(result_list.head).val == nums[len(nums) // 2]
+    assert Solution.middle_node(add_to_list.head).val == nums[len(nums) // 2]
 
 
 def test_append_node(create_list):
