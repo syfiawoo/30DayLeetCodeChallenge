@@ -18,6 +18,6 @@ class Solution:
                 num //= 10
             # have we already encountered this number
             same = sum_square in calc
-            tot = sum_square
-            calc.append(tot)
+            num = sum_square
+            calc.append(num)
         return num == 1
