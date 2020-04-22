@@ -1,15 +1,23 @@
 class Solution:
     @staticmethod
-    def is_happy(self, n: int) -> bool:
-        tot = n
-        same = False
+    def is_happy(n: int) -> bool:
+        """
+        My strategy for solving this problem is maintaining a list of numbers that have
+        already been encountered to prevent an indefinite amount of calculations
+        :param n: a counting number
+        :return: boolean indicating if number is happy
+        """
+        num = n
+        same = False  # track if we have already encountered num
         calc = [n]
-        while tot != 1 and not same:
-            sum_sq = 0
-            while tot > 0:
-                sum_sq += (tot % 10) ** 2
-                tot //= 10
-            same = sum_sq in calc
-            tot = sum_sq
+        while num != 1 and not same:
+            sum_square = 0
+            # get individual digits and perform calculation
+            while num > 0:
+                sum_square += (num % 10) ** 2
+                num //= 10
+            # have we already encountered this number
+            same = sum_square in calc
+            tot = sum_square
             calc.append(tot)
-        return tot == 1
+        return num == 1
