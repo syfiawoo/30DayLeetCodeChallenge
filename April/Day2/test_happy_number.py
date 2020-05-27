@@ -1,6 +1,6 @@
 from pytest import mark
 
-from Day2.happy_number import Solution
+from April.Day2.happy_number import Solution
 
 
 @mark.parametrize('num, expected', [(2, False),

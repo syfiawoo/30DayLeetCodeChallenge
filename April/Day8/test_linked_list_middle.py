@@ -1,6 +1,6 @@
 from pytest import fixture, mark
 
-from Day8.linked_list_middle import Solution, LinkedList
+from April.Day8.linked_list_middle import Solution, LinkedList
 
 
 @fixture
